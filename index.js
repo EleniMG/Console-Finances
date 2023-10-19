@@ -126,14 +126,31 @@ for (let i = 0; i < finances.length; i++){
     changeTotal += changesArray[k];
   }
 
-  console.log(changeTotal)
+  // console.log(changeTotal)
 
   let changeAverage = Math.round(100 * changeTotal / changesArray.length) / 100;
 
-  console.log(changeAverage)
+  // console.log(changeAverage)
+
 
 
 // The greatest increase in profits (date and amount) over the entire period.
+// Establish what amount is the greatest change
+// Find the first month we are using to calculate change
+
+let greatestIncreaseDate = "";
+let greatestIncreaseAmount = 0;
+
+for (let a = 0; a < changesArray.length; a++){
+  if(changesArray[a] > greatestIncreaseAmount){
+    greatestIncreaseAmount = changesArray[a];
+    // greatestIncreaseDate = changes
+  } else {
+    a++;
+  }
+}
+
+console.log(greatestIncreaseAmount)
 
 
 
