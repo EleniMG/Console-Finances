@@ -99,7 +99,7 @@ const totalMonths = finances.length;
 let netTotal = 0;
 
 for (let i = 0; i < finances.length; i++){
-  netTotal += finances[i][1]
+  netTotal += finances[i][1];
 }
 
 // console.log(netTotal)
@@ -115,11 +115,22 @@ for (let i = 0; i < finances.length; i++){
   let changesArray = []
 
   for (let j = 0; j < finances.length - 1; j++){
-    changesArray.push(finances[j + 1][1] - finances[j][1])
+    changesArray.push(finances[j + 1][1] - finances[j][1]);
   }
 
   console.log(changesArray)
 
+  let changeTotal = 0;
+
+  for (k = 0; k < changesArray.length; k++){
+    changeTotal += changesArray[k];
+  }
+
+  console.log(changeTotal)
+
+  let changeAverage = changeTotal / changesArray.length;
+
+  console.log(changeAverage)
 
 
 // The greatest increase in profits (date and amount) over the entire period.
