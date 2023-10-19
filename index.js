@@ -90,20 +90,36 @@ var finances = [
 
 // The total number of months included in the dataset.
 
-let totalMonths = finances.length;
+const totalMonths = finances.length;
 
 
 
 // The net total amount of Profit/Losses over the entire period.
 
+let netTotal = 0;
+
+for (let i = 0; i < finances.length; i++){
+  netTotal += finances[i][1]
+}
+
+console.log(netTotal)
+
+
+
 // The average of the changes in Profit/Losses over the entire period.
 
-// You will need to track what the total change in profits is from month to month and then find the average.
+  // You will need to track what the total change in profits is from month to month and then find the average.
 
-// (Total/(Number of months - 1))
+  // (Total/(Number of months - 1))
+
+
 
 // The greatest increase in profits (date and amount) over the entire period.
 
+
+
 // The greatest decrease in losses (date and amount) over the entire period.
+
+
 
 // Your final code should print the analysis to the console.
