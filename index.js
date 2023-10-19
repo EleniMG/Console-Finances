@@ -128,7 +128,7 @@ for (let i = 0; i < finances.length; i++){
 
   console.log(changeTotal)
 
-  let changeAverage = changeTotal / changesArray.length;
+  let changeAverage = Math.round(100 * changeTotal / changesArray.length) / 100;
 
   console.log(changeAverage)
 
