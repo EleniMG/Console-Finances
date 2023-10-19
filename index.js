@@ -102,7 +102,7 @@ for (let i = 0; i < finances.length; i++){
   netTotal += finances[i][1]
 }
 
-console.log(netTotal)
+// console.log(netTotal)
 
 
 
@@ -111,6 +111,14 @@ console.log(netTotal)
   // You will need to track what the total change in profits is from month to month and then find the average.
 
   // (Total/(Number of months - 1))
+
+  let changesArray = []
+
+  for (let j = 0; j < finances.length - 1; j++){
+    changesArray.push(finances[j + 1][1] - finances[j][1])
+  }
+
+  console.log(changesArray)
 
 
 
