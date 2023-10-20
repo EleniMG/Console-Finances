@@ -115,15 +115,15 @@ for (let i = 0; i < finances.length; i++){
   let changesArray = []
 
   for (let j = 0; j < finances.length - 1; j++){
-    changesArray.push(finances[j + 1][1] - finances[j][1]);
+    changesArray.push([finances[j + 1][0], finances[j + 1][1] - finances[j][1]]);
   }
 
-  console.log(changesArray)
+  // console.log(changesArray)
 
   let changeTotal = 0;
 
   for (k = 0; k < changesArray.length; k++){
-    changeTotal += changesArray[k];
+    changeTotal += changesArray[k][1];
   }
 
   // console.log(changeTotal)
@@ -142,15 +142,15 @@ let greatestIncreaseDate = "";
 let greatestIncreaseAmount = 0;
 
 for (let a = 0; a < changesArray.length; a++){
-  if(changesArray[a] > greatestIncreaseAmount){
-    greatestIncreaseAmount = changesArray[a];
-    // greatestIncreaseDate = changes
+  if(changesArray[a][1] > greatestIncreaseAmount){
+    greatestIncreaseDate = changesArray[a][0];
+    greatestIncreaseAmount = changesArray[a][1];
   } else {
     a++;
   }
 }
 
-console.log(greatestIncreaseAmount)
+console.log(greatestIncreaseAmount, greatestIncreaseDate)
 
 
 
