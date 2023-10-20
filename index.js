@@ -140,21 +140,31 @@ for (let i = 0; i < finances.length; i++){
 
 let greatestIncreaseDate = "";
 let greatestIncreaseAmount = 0;
+let greatestDecreaseDate = "";
+let greatestDecreaseAmount = 0;
 
 for (let a = 0; a < changesArray.length; a++){
   if(changesArray[a][1] > greatestIncreaseAmount){
     greatestIncreaseDate = changesArray[a][0];
     greatestIncreaseAmount = changesArray[a][1];
+  } else if (changesArray[a][1] < greatestDecreaseAmount) {
+    greatestDecreaseDate = changesArray[a][0];
+    greatestDecreaseAmount = changesArray[a][1];
   } else {
     a++;
   }
 }
 
-console.log(greatestIncreaseAmount, greatestIncreaseDate)
+// console.log(greatestIncreaseAmount, greatestIncreaseDate)
+console.log(greatestDecreaseDate, greatestDecreaseAmount)
 
 
 
 // The greatest decrease in losses (date and amount) over the entire period.
+
+
+
+
 
 
 
