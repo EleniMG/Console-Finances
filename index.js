@@ -102,8 +102,6 @@ for (let i = 0; i < finances.length; i++){
   netTotal += finances[i][1];
 }
 
-// console.log(netTotal)
-
 
 
 // The average of the changes in Profit/Losses over the entire period.
@@ -118,23 +116,19 @@ for (let i = 0; i < finances.length; i++){
     changesArray.push([finances[j + 1][0], finances[j + 1][1] - finances[j][1]]);
   }
 
-  // console.log(changesArray)
-
   let changeTotal = 0;
 
   for (k = 0; k < changesArray.length; k++){
     changeTotal += changesArray[k][1];
   }
 
-  // console.log(changeTotal)
 
   let changeAverage = Math.round(100 * changeTotal / changesArray.length) / 100;
-
-  // console.log(changeAverage)
 
 
 
 // The greatest increase in profits (date and amount) over the entire period.
+// The greatest decrease in losses (date and amount) over the entire period.
 // Establish what amount is the greatest change
 // Find the first month we are using to calculate change
 
@@ -155,17 +149,17 @@ for (let a = 0; a < changesArray.length; a++){
   }
 }
 
-// console.log(greatestIncreaseAmount, greatestIncreaseDate)
-console.log(greatestDecreaseDate, greatestDecreaseAmount)
-
-
-
-// The greatest decrease in losses (date and amount) over the entire period.
-
-
-
-
-
-
 
 // Your final code should print the analysis to the console.
+
+console.log("Financial Analysis:");
+
+console.log("Total Months: " + totalMonths);
+
+console.log("Total: $" + netTotal);
+
+console.log("Average Change: " + changeAverage);
+
+console.log("Greatest Increase in Profits/Losses: " + greatestIncreaseDate + " ($" + greatestIncreaseAmount + ")");
+
+console.log("Greatest Increase in Profits/Losses: " + greatestDecreaseDate + " ($" + greatestDecreaseAmount + ")");
