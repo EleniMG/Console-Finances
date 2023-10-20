@@ -162,4 +162,4 @@ console.log("Average Change: " + changeAverage);
 
 console.log("Greatest Increase in Profits/Losses: " + greatestIncreaseDate + " ($" + greatestIncreaseAmount + ")");
 
-console.log("Greatest Increase in Profits/Losses: " + greatestDecreaseDate + " ($" + greatestDecreaseAmount + ")");
+console.log("Greatest Decrease in Profits/Losses: " + greatestDecreaseDate + " ($" + greatestDecreaseAmount + ")");
